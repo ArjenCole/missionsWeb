@@ -445,7 +445,7 @@ body.realestate_version .social-links:hover a{
 }
 
 .header_style_01 .navbar-default .navbar-nav > li a.active {
-	background-color: #a8cf45;
+	background-color: #333333;
 	color: #ffffff;
 	border-radius: 2px;
 }
@@ -557,7 +557,7 @@ body.realestate_version .header_style_01 .navbar-right > li.search-option button
 	line-height: 43px;
 	width: 45px;
 	color: #fff;
-	background: #a8cf45;
+	background: #333333;
 	border: none;
 	transition: all .3s ease-in-out;
 	border-radius: 2px;
@@ -594,7 +594,7 @@ body.realestate_version .header_style_01 .navbar-right > li.search-option form b
 	display: block;
 	width: 48px;
 	color: #fff;
-	background: #a8cf45;
+	background: #333333;
 	border: 1px solid #fff;
 	border-left: none;
 	line-height: 40px;
@@ -822,7 +822,7 @@ body.realestate_version .header_style_01 .navbar-right > li.search-option form b
 
 .portfolio-filter ul li .btn-dark {
     box-shadow: none;
-    background-color: transparent;
+    background-color: #333333;
     border: 1px solid #e6e7e6 !important;
     color: #1f1f1f;
     font-weight: 400;
@@ -1118,7 +1118,7 @@ body.realestate_version .header_style_01 .navbar-right > li.search-option form b
 }
 
 .top-feature .center .single-feature, .top-feature .single-feature:hover {
-    border-bottom-color: #a8cf45;
+    border-bottom-color: #333333;
 }
 
 
@@ -1288,7 +1288,7 @@ body.realestate_version .header_style_01 .navbar-right > li.search-option form b
     position: absolute;
     top: 20px;
     right: 12px;
-	background: #a8cf45;
+	background: #333333;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	border-radius: 2px;
@@ -1307,7 +1307,7 @@ body.realestate_version .header_style_01 .navbar-right > li.search-option form b
     z-index: 4;
     color: #fff;
     text-align: left;
-    background: #a8cf45;
+    background: #333333;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	border-radius: 2px;
@@ -1418,7 +1418,7 @@ body.realestate_version .header_style_01 .navbar-right > li.search-option form b
 
 .post-media {
     position: relative;
-	border: 8px solid #a8cf45;	
+	border: 8px solid #333333;
 }
 
 .post-media img {
@@ -1442,7 +1442,7 @@ body.realestate_version .header_style_01 .navbar-right > li.search-option form b
 }
 
 .hoverbutton {
-    background-color: #a8cf45;
+    background-color: #333333;
     position: absolute;
     color: #1f1f1f !important;
     top: 48%;
@@ -2202,7 +2202,7 @@ select.mobile-device {
 
 .footer-links a:hover,
 .footer a:hover {
-    color: #a8cf45;
+    color: #333333;
 }
 
 .footer-links li {
@@ -2342,7 +2342,7 @@ select.mobile-device {
 }
 
 .footer-distributed .footer-company-name a:hover{
-	color: #a8cf45;
+	color: #333333;
 }
 
 
@@ -2366,7 +2366,7 @@ select.mobile-device {
 }
 
 .dmtop {
-    background-color: #a8cf45;
+    background-color: #333333;
     z-index: 100;
     width: 50px;
     height: 50px;
@@ -2425,7 +2425,7 @@ select.mobile-device {
     right: 0;
     bottom: 0;
     left: 0;
-    background: #a8cf45;
+    background: #333333;
     z-index: 11000;
     position: fixed;
     display: block;
@@ -2539,7 +2539,7 @@ select.mobile-device {
     padding: 10px 30px;
     font-size: 18px;
     color: #ffffff;
-    background-color: transparent;
+    background-color: #333333;
 }
 
 .btn-dark {
@@ -2547,7 +2547,7 @@ select.mobile-device {
     font-size: 18px;
     border: 1px solid #ececec !important;
     color: #1f1f1f;
-    background-color: transparent;
+    background-color: #333333;
 }
 
 .btn-light:hover,
@@ -2589,7 +2589,7 @@ select.mobile-device {
 }
 
 #breadcrumbs {
-	background: #a8cf45;
+	background: #333333;
 	padding: 10px 20px;
     position: absolute;
     right: 0px;
@@ -2617,7 +2617,7 @@ select.mobile-device {
 	color: #ffffff;
 }
 #breadcrumbs:hover ul li a{
-	color: #a8cf45;
+	color: #333333;
 }
 #breadcrumbs ul li:first-child::before {
 	display: none;
@@ -2651,7 +2651,7 @@ select.mobile-device {
 	display: block;
 	font-size: 28px;
 	color: #ffffff;	
-	background: #a8cf45;
+	background: #333333;
 	width: 48px;
 	height: 48px;
 	line-height: 48px;
