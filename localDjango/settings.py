@@ -133,4 +133,5 @@ STATICFILES_DIRS = (
     ("images", os.path.join(STATIC_ROOT, 'images').replace('\\', '/')),
     ("js", os.path.join(STATIC_ROOT, 'js').replace('\\', '/')),
     ("uploads", os.path.join(STATIC_ROOT, 'uploads').replace('\\', '/')),
+    ("ganttcj", os.path.join(STATIC_ROOT, 'ganttcj').replace('\\', '/')),
 )

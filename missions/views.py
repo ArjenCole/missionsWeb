@@ -5,6 +5,10 @@ from missions import db
 
 
 def index(request):
-    data = db.query("testtable")
-    return render(request, "index.html")
+    # data = db.query("testtable")
+    if request.method == 'POST':
+        return render(request, "gantt.html")
+    else:
+        return render(request, "index.html")
+
 

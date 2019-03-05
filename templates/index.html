@@ -101,6 +101,7 @@
                         <!--h3><i class="fa fa-envelope-o grd1 global-radius"></i> 登陆</h3-->
                         <h3><i class="fa fa-envelope-o"></i> 登陆</h3>
                         <form id="contactform1" class="row" name="contactform" method="post">
+                            {% csrf_token %}
                             <fieldset class="row-fluid">
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <input type="text" name="first_name1" id="first_name1" class="form-control" placeholder="用户名: smedi邮箱">
