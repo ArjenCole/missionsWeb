@@ -36,11 +36,12 @@
 <script src="{% static 'ganttcj/prettify.min.js' %}"></script>
 <script>
 
+    var List = {{ data|safe }};
     $(function () {
         "use strict";
         //初始化gantt
         $(".gantt").gantt({
-            source: {{ data.json }},
+            source: List,
             navigate: 'scroll',//buttons  scroll
             scale: "days",// months  weeks days  hours
             maxScale: "months",

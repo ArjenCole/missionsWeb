@@ -2,6 +2,7 @@ from django.shortcuts import render
 from missions import db
 import hashlib
 import base64
+import json
 # Create your views here.
 
 
@@ -46,9 +47,9 @@ def index(request):
                         'customClass': "ganttRed"
                         }]
                     }]
-                jsonss = ss
-                print(type(jsonss))
-                return render(request, "gantt.html", {'data': [{'name': "task 请我 1", 'desc': "", 'values': [{'from': "/Date(1320192000000)/",'to': "/Date(1320592000000)/",'label': "",'customClass': "ganttRed"}]}]})
+                jsonss = json.dumps(ss)
+                print(type(ss))
+                return render(request, "gantt.html", {'data': ss})
             else:
                 return render(request, "ganttStaffs.html")
         else:
