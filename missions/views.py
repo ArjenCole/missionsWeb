@@ -20,11 +20,37 @@ def index(request):
         c = base64.b64encode(h)
         d = str(c, encoding='gb2312')
         '''
-        password = db.query("Password", "staffs", "Account", account)
+        password = db.query("Password,Department,Authority", "staffs", "Account", account)
         print(password[0][0])
         print(d == password[0][0])
         if d == password[0][0]:
-            return render(request, "gantt.html")
+            au = db.query("MissionCheck", "authority", "Authority", password[0][2])
+            if au[0][0] == "仅自己":
+                missions = db.query("*", "missions", "Executor", account)
+                ss = [{
+                    'name': "task 请我 1",
+                    'desc': "",
+                    'values': [{
+                        'from': "/Date(1320192000000)/",
+                          'to': "/Date(1320592000000)/",
+                        'label': "",
+                        'customClass': "ganttRed"
+                        }]
+                    }, {
+                    'name': "task 请我 2",
+                    'desc': "",
+                    'values': [{
+                        'from': "/Date(1320192000000)/",
+                          'to': "/Date(1320592000000)/",
+                        'label': "",
+                        'customClass': "ganttRed"
+                        }]
+                    }]
+                jsonss = ss
+                print(type(jsonss))
+                return render(request, "gantt.html", {'data': [{'name': "task 请我 1", 'desc': "", 'values': [{'from': "/Date(1320192000000)/",'to': "/Date(1320592000000)/",'label': "",'customClass': "ganttRed"}]}]})
+            else:
+                return render(request, "ganttStaffs.html")
         else:
             return render(request, "index.html")
     else:
