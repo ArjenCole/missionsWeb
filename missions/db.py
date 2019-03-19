@@ -4,12 +4,12 @@ import pymysql
 
 
 def get_conn():
-    conn = pymysql.connect(host='localhost', port=3306, user='root', passwd='', db='missions')  # db:表示数据库名称
+    conn = pymysql.connect(host='localhost', port=3306, user='root', passwd='123456', db='missionsdb1')  # db:表示数据库名称
     return conn
 
 
-def query(table):
-    sql = 'SELECT * FROM ' + table + ';'
+def query(select, _from, where, value):
+    sql = 'SELECT ' + select + ' FROM ' + _from + ' WHERE ' + where + '=' + '"' + value + '"' + ';'
     return p_query(sql, None)
 
 
@@ -18,7 +18,8 @@ def p_query(sql, args):
     cur = conn.cursor()
     cur.execute(sql, args)
     results = cur.fetchall()
-    print(type(results))  # 返回<class 'tuple'> tuple元组类型
+    print(results)  # 返回<class 'tuple'> tuple元组类型
+    '''
     for row in results:
         print(row)
         id = row[0]
@@ -26,6 +27,7 @@ def p_query(sql, args):
         age = row[2]
         print('id: ' + str(id) + ' name: ' + name + ' age: ' + str(age))
         pass
+    '''
     return results
     conn.commit()
     cur.close()
