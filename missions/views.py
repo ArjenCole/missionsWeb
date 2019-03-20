@@ -2,6 +2,8 @@ from django.shortcuts import render
 from missions import db
 import hashlib
 import base64
+import time
+import datetime
 # Create your views here.
 
 
@@ -49,15 +51,37 @@ def getMissons(account):
         t = missions[i]
         if t[12] == "已完成":
             continue
-        v = dict([('from', "/Date(1320192000000)/"),
-                  ('to', "/Date(1320592000000)/"),
-                  ('label', ""),
-                  ('customClass', "ganttRed")])
-        lv = []
-        lv.append(v)
-        showName = t[0]
-        if showName == "":
-            showName = t[2]
-        dictMissions = dict(name=showName, desc=t[5], values=lv)
+        dictMissions = getdict(t)
         listMissions.append(dictMissions)
     return listMissions
+
+
+def getdict(t):
+    lv = getValues(t)
+    showName = t[0]
+    if showName == "":
+        showName = t[2]
+    return dict(name=showName, desc=t[5], values=lv)
+
+
+def getValues(t):
+    v = dict([('from', timeFormat(timeDiffer(t[9]))),
+              ('to', timeFormat(timeDiffer(t[10]))),
+              ('label', ""),
+              ('customClass', "ganttRed")])
+    lv = []
+    lv.append(v)
+    return lv
+
+
+def timeDiffer(date1, date2="1970-1-1"):
+    date1 = time.strptime(date1.replace("/", "-") + " 00:00:00", "%Y-%m-%d %H:%M:%S")
+    date2 = time.strptime(date2.replace("/", "-") + " 00:00:00", "%Y-%m-%d %H:%M:%S")
+    date1 = datetime.datetime(date1[0], date1[1], date1[2], date1[3], date1[4], date1[5])
+    date2 = datetime.datetime(date2[0], date2[1], date2[2], date2[3], date2[4], date2[5])
+    return (date1-date2).days
+
+
+def timeFormat(days):
+    return "/Date(" + str(days * 86400000) + ")/"
+
