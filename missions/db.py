@@ -18,7 +18,7 @@ def p_query(sql, args):
     cur = conn.cursor()
     cur.execute(sql, args)
     results = cur.fetchall()
-    print(results)  # 返回<class 'tuple'> tuple元组类型
+    # print(results)  # 返回<class 'tuple'> tuple元组类型
     '''
     for row in results:
         print(row)
