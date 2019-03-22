@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'localDjango.wsgi.application'
 DATABASES = {  # 77行
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'missions',
+        'NAME': 'missionsdb1',
         'USER': 'root',
         'PASSWORD': '123456',
         'HOST': 'localhost',
