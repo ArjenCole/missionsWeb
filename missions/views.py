@@ -78,10 +78,9 @@ def timeDiffer(date1, date2="1970-1-1"):
     date1Replace = date1.replace("/", "-") + " 00:00:00"
     date2Replace = date2.replace("/", "-") + " 00:00:00"
     if str(date1Replace) == " 00:00:00":
-        date1Replace = "1970-1-1 00:00:00"
-        print("e1" + date1Replace + "dd")
+        date1Replace = "2017-12-31 00:00:00"
     if str(date2Replace) == " 00:00:00":
-        date2Replace = "1970-1-1 00:00:00"
+        date2Replace = "2017-12-31 00:00:00"
     date1 = time.strptime(date1Replace, "%Y-%m-%d %H:%M:%S")
     date2 = time.strptime(date2Replace, "%Y-%m-%d %H:%M:%S")
     date1 = datetime.datetime(date1[0], date1[1], date1[2], date1[3], date1[4], date1[5])
