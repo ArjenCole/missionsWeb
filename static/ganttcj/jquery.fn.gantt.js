@@ -1445,6 +1445,7 @@
         var tools = {
 
             // Return the maximum available date in data depending on the scale
+            //根据比例返回数据中的最大可用日期。
             getMaxDate: function (element) {
                 var maxDate = null;
                 $.each(element.data, function (i, entry) {

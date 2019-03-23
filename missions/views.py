@@ -75,7 +75,7 @@ def getValues(t):
             'date_Handover': t[9], 'date_Submit': t[10], 'date_Publish': t[11],
             'status': t[12],
             'project_Manager': t[13], 'technical_Director': t[14], 'designer': t[15],
-            'proofreader':t[16], 'auditor': t[17], 'executor': t[18],
+            'proofreader': t[16], 'auditor': t[17], 'executor': t[18],
             'expDays': t[19], 'remark': t[20], 'key': t[21], 'date_Finish': t[22],
             'workCost': t[23], 'fee': t[24], 'date_Create': t[25], 'creator': t[26]}
     data = json.dumps(data, ensure_ascii=False)
